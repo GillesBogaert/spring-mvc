@@ -8,8 +8,6 @@ package com.ip.events.controller;
 import com.ip.events.model.Event;
 import com.ip.events.service.EventService;
 import com.ip.events.validation.UserFormValidator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -24,13 +22,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping(value="/event")
 public class EventsController {
 
-    private final Logger logger = LoggerFactory.getLogger(EventsController.class);
     
     @Autowired
     UserFormValidator validator;

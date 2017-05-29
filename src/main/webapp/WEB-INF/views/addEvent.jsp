@@ -36,8 +36,6 @@
                     <td><td><input id="save" type="submit" value="Submit"></td>
                 </table>
             </form:form>
-            <p><spring:message code="add.startdate" text="add.startdate"/></p>
-            <a href="<c:url value='?lang=nl'/>">Nederlands</a>
         </div>
             <jsp:include page="partial/footer.jsp">
                 <jsp:param name="title" value="addEvent" />

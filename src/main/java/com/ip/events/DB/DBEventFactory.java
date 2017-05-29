@@ -18,7 +18,7 @@ public class DBEventFactory {
         else {
             //db = new DBEventSQL();
         }
-        db = new DBEventMemory();
+        db = new EventJpaDatabase();
         return db;
     }
 

@@ -17,8 +17,12 @@
             <h2>Are you sure you want to deleted event with ID : ${event.id} ? </p>
                 <a href="<c:url value="/event/delete/${event.id}.htm"/>"><button class="btn btn-large btn-primary" data-toggle="confirmation">Yes</button></a>
                 <a href="<c:url value="/event/eventOverview.htm"/>"><button class="btn btn-large btn-danger" data-toggle="confirmation">No</button></a>
+            </h2>
+            
 
-
-
-                </body>
-                </html>
+        </div>
+            <jsp:include page="partial/footer.jsp">
+                <jsp:param name="title" value="Home" />
+            </jsp:include>
+    </body>
+</html>

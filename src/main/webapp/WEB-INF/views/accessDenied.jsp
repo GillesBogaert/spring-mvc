@@ -18,6 +18,10 @@
                 <p><a href="<c:url value="/security/logout" />">Logout</a> and try logging in with a different username/password combo</p>
             </div>
         </div>
+            <jsp:include page="partial/footer.jsp">
+                <jsp:param name="title" value="Home" />
+            </jsp:include>
     </body>
+    
 
 </html>

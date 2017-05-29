@@ -37,5 +37,8 @@
                 </table>
             </form:form>
         </div>
+            <jsp:include page="partial/footer.jsp">
+                <jsp:param name="title" value="Home" />
+            </jsp:include>
     </body>
 </html>

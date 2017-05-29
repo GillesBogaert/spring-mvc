@@ -43,5 +43,8 @@
                 </div>
             </div>          
         </div>
+                <jsp:include page="partial/footer.jsp">
+                <jsp:param name="title" value="Home" />
+            </jsp:include>
     </body>
 </html>
