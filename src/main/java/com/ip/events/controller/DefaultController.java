@@ -23,16 +23,20 @@ public class DefaultController {
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public String homePage(Locale locale, ModelMap model) {
         
-        // add parametrized message from controller
-        String welcome = messageSource.getMessage("valid.id", new Object[]{"John Doe"}, locale);
-        model.addAttribute("message", welcome);
         Locale currentLocale = LocaleContextHolder.getLocale();
         model.addAttribute("locale", currentLocale);
-
-        model.addAttribute("startMeeting", "10:30");
         
         
         return "index";
     }
+    
+    @RequestMapping(value = {"/doc"}, method = RequestMethod.GET)
+    public String documentation(Locale locale, ModelMap model) {
+        
+        
+        return "documentation";
+    }
+    
+    
     
 }
