@@ -18,8 +18,6 @@ public class UserFormValidator implements Validator {
     @Qualifier("dateValidator")
     DateValidator dateValidator;
 
-    @Autowired
-    EventService eventService;
 
     @Override
     public boolean supports(Class<?> type) {

@@ -16,6 +16,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication().withUser("a").password("a").roles("USER");
         auth.inMemoryAuthentication().withUser("miekem").password("1234").roles("ADMIN");
         auth.inMemoryAuthentication().withUser("gilles").password("1234").roles("ADMIN", "DBA");
+        auth.inMemoryAuthentication().withUser("Sofie").password("GillesIsTheBest").roles("ADMIN", "DBA");
     }
 
     @Override
@@ -23,7 +24,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/event/home**" , "/event/").permitAll()
+                .antMatchers("/event/home**" , "/event/", "/event/rest/**").permitAll()
                 .antMatchers("/event/eventOverview**", "/event/addEvent**").hasAnyRole("ADMIN")
                 .and().formLogin().loginPage("/security/login")
                 .usernameParameter("ssoId").passwordParameter("password")

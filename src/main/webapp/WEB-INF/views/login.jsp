@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html>
 
     <jsp:include page="partial/head.jsp">
@@ -13,8 +14,8 @@
             </jsp:include> 
 
             <div class = "text">
-                <h1>Welcome to the Login page</h1>
-                <p> Enter your login details here to gain access to the various tabs</p>
+                <h1><spring:message code="login.welcome"/></h1>
+                <p><spring:message code="login.welcomeMessage"/></p>
                 <div id="mainWrapper">
                     <div class="login-container">
                         <div class="login-card">

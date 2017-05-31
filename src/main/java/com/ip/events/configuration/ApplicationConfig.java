@@ -16,15 +16,15 @@ import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 @Configuration
-public class ApplicationConfig extends WebMvcConfigurerAdapter{
+public class ApplicationConfig extends WebMvcConfigurerAdapter {
 
-    @Bean (destroyMethod ="close")
+    @Bean(destroyMethod = "close")
     public EventService service() {
-        return new EventService("Memory");
+        return new EventService("JPA");
     }
-    
-   @Bean
-    public ReloadableResourceBundleMessageSource messageSource(){
+
+    @Bean
+    public ReloadableResourceBundleMessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("classpath:messages");
         messageSource.setDefaultEncoding("UTF-8");
@@ -32,7 +32,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter{
     }
 
     @Bean
-    public CookieLocaleResolver localeResolver(){
+    public CookieLocaleResolver localeResolver() {
         CookieLocaleResolver localeResolver = new CookieLocaleResolver();
         localeResolver.setDefaultLocale(Locale.ENGLISH);
         localeResolver.setCookieName("my-locale-cookie");
@@ -41,7 +41,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter{
     }
 
     @Bean
-    public LocaleChangeInterceptor localeInterceptor(){
+    public LocaleChangeInterceptor localeInterceptor() {
         LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
         interceptor.setParamName("lang");
         return interceptor;
@@ -51,8 +51,5 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter{
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeInterceptor());
     }
-    
 
-
-    
 }

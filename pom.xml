@@ -15,6 +15,7 @@
         <springsecurity.version>4.0.2.RELEASE</springsecurity.version>
         <mysql.connector.version>5.1.31</mysql.connector.version>
         <payara.home>/opt/payara41</payara.home>
+        <log4j.version>1.2.17</log4j.version>
     </properties>
 
     <dependencies>
@@ -28,6 +29,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
         <dependency>
@@ -48,8 +54,6 @@
             <artifactId>spring-security-config</artifactId>
             <version>4.2.2.RELEASE</version>
         </dependency>
-        
-        
         
         <!-- JAVAX/JPA -->
         
@@ -85,6 +89,24 @@
             <type>jar</type>
         </dependency>
     
+        <!-- JSON -->
+        
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>

@@ -14,14 +14,13 @@
                 <jsp:param name="title" value="Home" />
             </jsp:include> 
             <div class = "text">
-                <h1>Welcome to the home page</h1>
-                <p> This is a website dedicated to keeping track of Gilles' Events</p>
-                <a href="?lang=en">English </a> | <a href="?lang=nl">Dutch </a>
-                <spring:message code="valid.id"/>
+                <h1><spring:message code="index.welcome"/></h1>
+                <p><spring:message code="index.welcomeMessage"/></p>
+
             </div>
         </div>
             <jsp:include page="partial/footer.jsp">
-                <jsp:param name="title" value="Home" />
+                <jsp:param name="title" value="Home"/>
             </jsp:include> 
     </body>
 
