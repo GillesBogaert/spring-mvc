@@ -83,8 +83,10 @@ public class EventsController {
     }
 
     @RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
-    public ModelAndView getEditForm(@PathVariable String id) {
-        return new ModelAndView("addEvent", "event", service.getEvent(id));
+    public String getEditForm(Model model, @PathVariable String id) {
+        Event event = service.getEvent(id);
+        model.addAttribute("eventForm", event);
+        return "addEvent";
     }
 
     @RequestMapping(value = "/saveEvent", method = RequestMethod.POST)

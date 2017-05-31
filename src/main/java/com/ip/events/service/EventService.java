@@ -48,16 +48,9 @@ public class EventService {
         
     }
     
-    
-    
-    
-    
     public void deleteAll(){
         db.removeAllEvents();
     }
-    
-    
-    
 
     public boolean contains(Event event) {
         boolean outcome = true;
