@@ -22,18 +22,15 @@
                     For example : http://193.191.187.14:10068/spring-mvc/event/rest/getevent/ee1c0512-5cbd-4bc4-b913-4997b2b60549<br>
                     Will respond with a NOT_FOUND Status if not found and OK Status if found.
                   </p> 
-                  <h2>Show all Events</h2>
-                  <p>To find all events To find a user us the link http://193.191.187.14:10068/spring-mvc/rest/users <br>
-                  Will respond with OK status</p>
                   <h2>Delete Event</h2>
-                  <p>To delete a user : http://193.191.187.14:10068/spring-mvc/rest/deleteevent/(Your ID here)<br>
+                  <p>To delete an event : http://193.191.187.14:10068/spring-mvc/rest/deleteevent/(Your ID here)<br>
                   If no event found NOT_FOUND status will be returned. If sucess a NO_CONTENT status will be returned.</p>
                   <h2>Add Event</h2>
-                  <p>To delete a user : http://193.191.187.14:10068/spring-mvc/rest/createevent<br>
+                  <p>To add an event : http://193.191.187.14:10068/spring-mvc/rest/createevent<br>
                   If event exists, CONFLICT Status will be returned. If success, CREATED Status will be returned</p>
-                  <h2></h2>
-                  <p>To delete a user : http://193.191.187.14:10068/spring-mvc/rest/deleteevent/(Your ID here)<br>
-                  If event doenst exist, returns NOT_FOUND STATUS. If successfully updated OK STATUS returned</p>
+                  <h2>Update Event</h2>
+                  <p>To update an event : http://193.191.187.14:10068/spring-mvc/rest/updateevent/(Your ID here)<br>
+                  If event doesnt exist, returns NOT_FOUND STATUS. If successfully updated OK STATUS returned</p>
                   
             </div>
         </div>
