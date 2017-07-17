@@ -53,11 +53,10 @@ public class EventService {
     }
 
     public boolean contains(Event event) {
-        boolean outcome = true;
-        if (db.getEvent(event.getId()) == null){
-            outcome = false;
+        if ( db.getEvent(event.getId()) != null){
+            return true;
         }
-        return outcome;
+        return false;
     }
 
 }

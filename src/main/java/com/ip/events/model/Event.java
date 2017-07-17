@@ -26,6 +26,8 @@ public class Event {
     private String startDate;
     private String name;
     
+    public static long counter = 1;
+    
     @Id
     @GeneratedValue
     private String id;
@@ -34,9 +36,8 @@ public class Event {
         return id;
     }
 
-    public void setId() {
-
-        this.id = UUID.randomUUID().toString();
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -49,17 +50,22 @@ public class Event {
 
     public Event() {
         
-        setId();
+        id = Long.toString(counter);
+        counter++;
+ 
 
     }
 
     public Event(String endDate, String startDate, String name) {
+        
         setendDate(endDate);
         setstartDate(startDate);
         setEndDatef(endDate);
         setStartDatef(startDate);
         setName(name);
-        setId();
+        
+        id = Long.toString(counter);
+        counter++;
     }
 
     public String getEndDate() {

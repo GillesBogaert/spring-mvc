@@ -43,7 +43,7 @@ public class SmokeTest {
     @Before
     public void setUp() {
         String date1 = "2016-03-04 11:30";
-        String date2 = "2016-03-04 11:30";
+        String date2 = "2016-03-04 11:32";
         LocalDateTime date3 = LocalDateTime.of(2014, Month.JANUARY, 1,0,0);
         LocalDateTime date4 = LocalDateTime.of(2014, Month.JANUARY, 2,0,0);
         service.deleteAll();

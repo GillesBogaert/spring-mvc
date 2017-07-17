@@ -33,6 +33,10 @@
                         <td><form:errors  class="alert alert-danger" path="endDate"/></td>
 
                     </tr>
+                    <tr style="display:none;" class="event">
+                        <td><label for="id">ID:</label>
+                        <td><form:input path="id" id="id" type="text"/></td>
+                    </tr>
                     <td><td><input id="save" type="submit" value="Submit"></td>
                 </table>
             </form:form>

@@ -85,27 +85,32 @@ public class EventsController {
     @RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
     public String getEditForm(Model model, @PathVariable String id) {
         Event event = service.getEvent(id);
+        System.out.println("Editing event with value " + event.getId());
         model.addAttribute("eventForm", event);
         return "addEvent";
     }
 
     @RequestMapping(value = "/saveEvent", method = RequestMethod.POST)
     public String save(@ModelAttribute("eventForm") @Validated Event event, BindingResult result, Model model) {
-        System.out.println(result.toString());
+        System.out.println("Saving event with value" + event.getId());
         if (result.hasErrors()) {
             return "addEvent";
         }
-        if (service.contains(event)) {
+        if (service.contains(event)){
             service.update(event);
-        } else {
+        }
+        else {
             service.addEvent(event);
         }
+        //service.deleteAll();
         return "redirect:/event/eventOverview";
     }
 
     public EventService getService() {
         return this.service;
     }
+    
+
 
     /* REST */
     @RequestMapping(value = "/rest/users", method = RequestMethod.GET)
