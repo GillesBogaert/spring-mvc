@@ -9,13 +9,15 @@ import com.ip.events.model.Event;
 import com.ip.events.DB.DBEvent;
 import com.ip.events.DB.DBEventFactory;
 import com.ip.events.DB.DBEventMemory;
+import java.lang.annotation.Annotation;
 import java.util.List;
 
 /**
  *
  * @author Gilles
  */
-public class EventService {
+
+public class EventService implements Service {
     
     private DBEvent db;
     private DBEventFactory factory;
@@ -25,9 +27,11 @@ public class EventService {
         this.db = factory.createDatabase(choice); 
     }
     
+    @Override
     public Event getEvent(String id){
         return db.getEvent(id);
     }
+    @Override
     public List<Event> getEvents(){
         return db.getAllEvents();
     }
@@ -58,5 +62,6 @@ public class EventService {
         }
         return false;
     }
+
 
 }

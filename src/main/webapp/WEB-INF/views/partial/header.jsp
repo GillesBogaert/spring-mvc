@@ -9,6 +9,7 @@
             <li ${param.title eq 'Home' ? 'class="active"' : ''}><a href="<c:url value="/event/home"/>"><spring:message code="header.home"/></a></li>
             <li ${param.title eq 'Overview' ? 'class="active"' : ''}><a href="<c:url value="/event/eventOverview"/>"><spring:message code="header.overview"/></a></li>
             <li ${param.title eq 'addEvent' ? 'class="active"' : ''}><a href="<c:url value="/event/addEventPage"/>"><spring:message code="header.add"/></a></li>
+            <li ${param.title eq 'addEvent' ? 'class="active"' : ''}><a href="<c:url value="/rest/resthome"/>"><spring:message code="header.rest"/></a></li>
                 <c:if test="${pageContext.request.userPrincipal.name != null}">
                 <li><spring:message code="header.loggedAs"/> ${pageContext.request.userPrincipal.name} <li>
                 </c:if>
