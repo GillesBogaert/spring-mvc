@@ -8,7 +8,7 @@
     <jsp:include page="partial/head.jsp">
         <jsp:param name="title" value="Home" />
     </jsp:include>
-    <body class="centered-wrapper">
+    <body class="centered-wrapper">      s
         <div class="centered-content">
             <jsp:include page="partial/header.jsp">
                 <jsp:param name="title" value="Home" />
